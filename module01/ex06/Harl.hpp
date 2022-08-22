@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 16:10:11 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/22 13:56:41 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/22 13:11:05 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/22 16:48:16 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Harl {
         void    error(void);
     
     public :
-        void complain(std::string level);
+        void complain( std::string level );
 
 };
 

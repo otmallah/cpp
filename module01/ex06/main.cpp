@@ -5,30 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 12:59:13 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 22:13:56 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/22 13:18:30 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/22 16:50:55 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include "Harl.hpp"
 
-int main()
+int main(int ac, char *av[])
 {
-    PhoneBook phone;
-    std::string str;
+    Harl obj;
+    std::string level;;
 
-    while (1 && !std::cin.eof())
+    if (ac > 2 || ac < 2)
+        std::cout << "enter <executable> <level>" << std::endl;
+    else
     {
-        std::cout << "Enter the command : ";
-        getline(std::cin, str);
-        if (str == "ADD")
-        {
-            phone.ADD();
-            phone.i++;
-        }
-        else if (str == "SEARCH")
-            phone.SEARCH();
-        else if (str == "EXIT")
-            return (0);
-    }   
+        level = av[1];
+        obj.complain(level);        
+    }
 }

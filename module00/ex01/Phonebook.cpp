@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 13:35:47 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 21:09:53 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/22 14:38:37 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Phonebook.hpp"
+#include "PhoneBook.hpp"
 
 void    PhoneBook::SEARCH()
 {
@@ -36,11 +36,19 @@ void    PhoneBook::SEARCH()
     }
     std::cout << "enter the index : ";
     std::cin >> num;
+    while (std::cin.fail())
+    {
+        std::cout << "is not an integer" << std::endl;
+        std::cin.clear();
+        std::cin.ignore(256,'\n');
+        std::cout << "enter the index : ";
+        std::cin >> num;
+    }
     std::cin.clear();
     std::cin.ignore();
     if (num < 0 || num > 7)
         std::cout << "index is out of range or wrong" << std::endl;
-    if (num >= 0 && num <= 7)
+    else if (num >= 0 && num <= 7)
     {
         std::cout << "index      : " << num  <<std::endl ;
         std::cout << "First name : " << contact[num].get_firstname() << std::endl;

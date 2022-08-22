@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 17:23:56 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 19:46:22 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/22 16:39:58 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,8 @@ int main()
 {
     Harl obj;
 
-    obj.complain("debug");
+    obj.complain("DEBUG");
+    obj.complain("INFO");
+    obj.complain("WARNING");
+    obj.complain("ERROR");
 }

@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 17:00:44 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 19:47:02 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/22 16:39:00 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,14 @@ void    Harl::error()
 
 void    Harl::complain(std::string level)
 {
-    void    (Harl::*tes)() = &Harl::debug;
-    void    (Harl::*tes1)() = &Harl::info;
-    void    (Harl::*tes2)() = &Harl::warning;
-    void    (Harl::*tes3)() = &Harl::error;
-
-    if (level == "debug")
-        (obj.*tes)();
+    void (Harl::*fun[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    int i = 0;
+    std::string test[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    while (i < 4)
+    {
+        if (test[i].compare(level) == 0)
+            (this->*fun[i])();
+        i++;
+    }
     
 }
