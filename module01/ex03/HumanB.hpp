@@ -5,25 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 17:55:36 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/19 15:58:59 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/22 19:44:59 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/25 12:10:06 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
 
-#include <iostream>
 #include "Weapon.hpp"
+#include <iostream>
 
-class   HumanB {
-    public :
-        Weapon weap;
+class HumanB {
+    private :
         std::string name;
-        void    attack()
-        {
-            std::cout << name << " attacks with their " << weap.getType() << std::endl;
-        }
+        Weapon *weap;
+    public :
+        void    attack();
+        HumanB(std::string str);
+        void    setWeapon(Weapon *weap);
+        
 };
 
 #endif

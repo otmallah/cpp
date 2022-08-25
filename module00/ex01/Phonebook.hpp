@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 13:31:47 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 12:59:48 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:01:04 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class PhoneBook {
         int i;
         int num;
         int check;
+        int count;
         std::string line;
         void    ADD();
         void    SEARCH();

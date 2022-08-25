@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 19:37:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/24 18:49:48 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/25 15:28:35 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/25 19:20:48 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#include "Fixed.hpp"
 
-#include "Weapon.hpp"
-#include <iostream>
-
-class HumanA {
-    private :
-        Weapon& weap;
-        std::string name;
-    public :
-        void    attack();
-        HumanA(std::string str, Weapon& weap1);    
-};
-
-#endif
+int main( void )
+{
+    Fixed a;
+    Fixed const b( 10 );
+    Fixed const c( 42.42f );
+    Fixed const d( b );
+    a = Fixed( 1234.4321f );
+    std::cout << "a is " << a.getFixed() << std::endl;
+    //std::cout << "b is " << b.getFixed() << std::endl;
+    // std::cout << "c is " << c.getFixed() << std::endl;
+    // std::cout << "d is " << d.getFixed() << std::endl;
+}

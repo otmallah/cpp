@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:01:28 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/18 13:55:01 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/22 18:17:37 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,8 @@ class   Zombie {
         std::string name;
     public :
         void    announce(void);
-        void    setname(std::string n)
-        {
-            name = n;
-        }
-        ~Zombie()
-        {
-            std::cout << "zombie " << name << " has destroyed!" << std::endl;
-        }
+        void    setname(std::string name1);
+        ~Zombie();
 };
 
 Zombie* zombieHorde( int N, std::string name );

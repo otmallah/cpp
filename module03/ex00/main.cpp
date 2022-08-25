@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 19:37:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/24 18:49:48 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/25 20:12:45 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/25 20:13:22 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
-
-#include "Weapon.hpp"
 #include <iostream>
 
-class HumanA {
-    private :
-        Weapon& weap;
-        std::string name;
-    public :
-        void    attack();
-        HumanA(std::string str, Weapon& weap1);    
+class Vehicle {
+  public:
+    std::string brand = "Ford";
+    void honk() {
+      std::cout << "Tuut, tuut! \n" ;
+    }
 };
 
-#endif
+// Derived class
+class Car: public Vehicle {
+  public:
+    std::string model = "Mustang";
+};
+
+int main() {
+  Car myCar;
+  myCar.honk();
+  std::cout << myCar.brand + " " + myCar.model;
+  return 0;
+}

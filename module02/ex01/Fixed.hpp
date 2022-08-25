@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 19:37:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/24 18:49:48 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/24 23:44:33 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/25 19:18:37 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-#include "Weapon.hpp"
 #include <iostream>
+#include <tgmath.h>
 
-class HumanA {
+class Fixed {
+    
     private :
-        Weapon& weap;
-        std::string name;
+        int fixed_point_number;
+        static const int number = 8;
+    
     public :
-        void    attack();
-        HumanA(std::string str, Weapon& weap1);    
+        Fixed();
+        Fixed(const Fixed& new_obj);
+        Fixed(const int number);
+        Fixed(const float number);
+        Fixed& operator=(const Fixed& fix);
+        //~Fixed();
+        float toFloat( void );
+        int toInt( void );
+        int getFixed();
 };
+
 
 #endif

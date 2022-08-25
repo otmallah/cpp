@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 19:37:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/24 18:49:48 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/24 23:48:17 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/25 19:31:38 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#include "Fixed.hpp"
 
-#include "Weapon.hpp"
-#include <iostream>
-
-class HumanA {
+class test {
     private :
-        Weapon& weap;
         std::string name;
     public :
-        void    attack();
-        HumanA(std::string str, Weapon& weap1);    
-};
-
-#endif
+        
+}

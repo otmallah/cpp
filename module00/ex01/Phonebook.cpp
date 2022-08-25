@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 13:35:47 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/22 14:38:37 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:42:39 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void    PhoneBook::SEARCH()
     int a = 0;
     std::cout << "  Index    | " << " first name   |" <<  " last name "<<  "    |nick name "<<std::endl;
     std::cout << "-----------------------------------------------------" << std::endl;
-    while (a < i)
+    while (a < count)
     {
         std::cout << std::setfill (' ') << std::setw(10) << a << " | ";
         if (contact[a].get_firstname().size() > 10)
@@ -69,14 +69,34 @@ void    PhoneBook::ADD()
     contact[i].set_firstname(line);
     std::cout << "Enter Last name : ";
     getline(std::cin, line);
-    contact[i].set_lastname(line);
+    if (!line.empty())
+        contact[i].set_lastname(line);
     std::cout << "Enter nick name : ";
     getline(std::cin, line);
-    contact[i].set_nickname(line);
+    if(!line.empty())
+        contact[i].set_nickname(line);
     std::cout << "Enter number phone : ";
     getline(std::cin, line);
-    contact[i].set_phone_number(line);
+    if(!line.empty()) 
+        contact[i].set_phone_number(line);
     std::cout << "Enter number darkest secret : ";
-    getline(std::cin, line);
+    if(!line.empty())
+        getline(std::cin, line);
     contact[i].set_darkestsecret(line);
+    if (contact[i].get_firstname().size() == 0 || contact[i].get_lastname().size() == 0
+        || contact[i].get_nickname().size() == 0 || contact[i].get_darkestsecret().size() == 0
+        || contact[i].get_phonenumber().size() == 0)
+    {
+        if (count < 8)
+        {
+            contact[i].set_darkestsecret(" ");
+            contact[i].set_nickname(" ");
+            contact[i].set_firstname(" ");
+            contact[i].set_lastname(" ");
+            contact[i].set_phone_number(" ");
+        }
+        check = 2;
+    }
+    else
+        check = 1;
 }

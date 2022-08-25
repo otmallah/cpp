@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 12:59:13 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 22:13:56 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:08:57 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int main()
         if (str == "ADD")
         {
             phone.ADD();
-            phone.i++;
+            if (phone.check == 1)
+                phone.i++;
+            if (phone.count < 8)
+                phone.count = phone.i;
         }
         else if (str == "SEARCH")
             phone.SEARCH();

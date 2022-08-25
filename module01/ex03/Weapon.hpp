@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 16:13:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/19 19:18:02 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/22 19:32:03 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/24 18:51:29 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,16 @@
 
 #include <iostream>
 
-class Weapon {
-    private :
+class Weapon
+{
+    private:
         std::string type;
-    public :
-        const std::string& getType()
-        {
-            return type;
-        }
-        void    setType(std::string name)
-        {
-            type = name;
-        }
+    public:
+        const std::string& getType( void );
+        void    setType( std::string name );
+        Weapon(std::string type);
 };
 
-Weapon  Weapo(std::string str);
+
 
 #endif
