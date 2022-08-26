@@ -11,5 +11,14 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include "ClapTrap.hpp"
 
-int 
+int main()
+{
+    ClapTrap ClapTrack;
+    ClapTrack("POOK");
+    ClapTrack.attack("giik");
+    ClapTrack.beRepaired(20);
+    
+    
+}
