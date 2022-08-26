@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 20:12:45 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 16:37:10 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/26 21:25:04 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/26 21:42:28 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include <iostream>
 #include "ClapTrap.hpp"
 
-int main()
-{
-    ClapTrap claptrack("LEGEND");
+class FragTrap : public ClapTrap {
+    public :
+        FragTrap (std::string name);
+        ~FragTrap();
+        void    highFivesGuys(void);
+        void attack(const std::string& target);
+};
 
-    claptrack.attack("POOK");
-    claptrack.takeDamage(10);
-    claptrack.beRepaired(200);
-}
+#endif

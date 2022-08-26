@@ -3,9 +3,9 @@
 ClapTrap::ClapTrap( std::string name)
 {
     this->name = name;
-    this->Hit_points = 10;
-    this->Energy_points = 10;
-    this->Attack_damage = 0;
+    Hit_points = 100;
+    Energy_points = 100;
+    Attack_damage = 30;
     std::cout << "Constructore called " << std::endl;
 }
 
@@ -25,7 +25,6 @@ void    ClapTrap::attack( const std::string& target)
         std::cout << "ClapTrap can't do nothing!" << std::endl;
     else
     {
-        
         this->Energy_points--;
         std::cout << "ClapTrap " << this->name << " attacks "  << target << "v, causing " << this->Attack_damage << " points of damage!" << std::endl;
     }
@@ -34,17 +33,17 @@ void    ClapTrap::attack( const std::string& target)
 void    ClapTrap::takeDamage( unsigned int amount )
 {
     this->Hit_points = this->Hit_points - amount;
-    std::cout << "ClapTrap " << this->name << " takeDmage "  << amount << std::endl;
+    std::cout << " takeDmage "  << amount << std::endl;
 }
 
 void    ClapTrap::beRepaired( unsigned int amount)
 {
     if (this->Hit_points == 0 || this->Energy_points == 0)
-        std::cout << "ClapTrap can't do nothing!" << std::endl;
+        std::cout << "Can't do nothing!" << std::endl;
     else
     {
         this->Hit_points += amount;
         this->Energy_points--;
-        std::cout << "ClapTrap " << this->name << " Repaired "  << amount << ", ADD in Hits points" <<  std::endl;
+        std::cout << this->name << " Repaired "  << amount << ", ADD in Hits points" <<  std::endl;
     }
 }
