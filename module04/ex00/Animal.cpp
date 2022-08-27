@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 20:12:45 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:58:28 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/27 15:50:32 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/27 21:49:31 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ClapTrap.hpp"
+#include "Animal.hpp"
 
-int main()
+Animal::Animal()
 {
-    ClapTrap claptrack("LEGEND");
-    ClapTrap trap("Zelda");
-    claptrack.attack("Zelda");
-    trap.takeDamage(10);
-    trap.beRepaired(200);
+    std::cout << "Animal Constructor called " << std::endl;
+}
+
+Animal::~Animal()
+{
+    std::cout << "Animal Destructor Called" << std::endl;
+}
+
+std::string     Animal::getType() const
+{
+    return (type);
+}
+
+void    Animal::makeSound() const
+{
+    std::cout << "Animal sound" << std::endl;
 }

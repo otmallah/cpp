@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 20:12:45 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:58:28 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/27 15:54:19 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/27 21:49:03 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ClapTrap.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main()
-{
-    ClapTrap claptrack("LEGEND");
-    ClapTrap trap("Zelda");
-    claptrack.attack("Zelda");
-    trap.takeDamage(10);
-    trap.beRepaired(200);
-}
+#include <iostream>
+#include "Animal.hpp"
+
+class Dog : public Animal {
+    
+    public :
+        Dog();
+        ~Dog();
+        void    makeSound() const;
+        std::string getType() const;
+
+};
+
+
+
+#endif

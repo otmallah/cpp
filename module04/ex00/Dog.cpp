@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 20:12:45 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:58:28 by otmallah         ###   ########.fr       */
+/*   Created: 2022/08/27 15:59:23 by otmallah          #+#    #+#             */
+/*   Updated: 2022/08/27 21:49:52 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ClapTrap.hpp"
+#include "Dog.hpp"
 
-int main()
+Dog::Dog()
 {
-    ClapTrap claptrack("LEGEND");
-    ClapTrap trap("Zelda");
-    claptrack.attack("Zelda");
-    trap.takeDamage(10);
-    trap.beRepaired(200);
+    this->type = "Dog";
+    std::cout << "Dog constructor called" << std::endl;
+}
+
+Dog::~Dog()
+{
+    std::cout << "Dog descturtor called" << std::endl;
+}
+
+void    Dog::makeSound() const
+{
+    std::cout << "haww haaw haaw" << std::endl;
+}
+
+std::string Dog::getType() const
+{
+    return this->type;
 }
