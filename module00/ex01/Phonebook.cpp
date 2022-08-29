@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 13:35:47 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/23 17:42:39 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/28 19:13:45 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void    PhoneBook::SEARCH()
     {
         std::cout << std::setfill (' ') << std::setw(10) << a << " | ";
         if (contact[a].get_firstname().size() > 10)
-            std::cout << std::setfill (' ') << std::setw(10) << contact[a].get_firstname().substr(0, 10) << "." << " | ";
+            std::cout << std::setfill (' ') << std::setw(10)
+             << contact[a].get_firstname().substr(0, 10) << "." << " | ";
         else
             std::cout << std::setfill (' ') << std::setw(10) << contact[a].get_firstname() << " | ";
         if (contact[a].get_lastname().size() > 10)
