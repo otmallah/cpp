@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 13:32:46 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 12:57:18 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/30 15:46:00 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Contact {
         std::string darkest_secret;
     
     public :
-        
+        static int getname(void);
         void    set_firstname(std::string fname);
         void    set_lastname(std::string lname);
         void    set_nickname(std::string nname);

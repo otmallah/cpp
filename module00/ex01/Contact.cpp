@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 13:50:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/21 12:57:49 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/08/30 15:47:03 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ void    Contact::set_lastname(std::string lname)
     last_name = lname;
 }
 
+int Contact::getname() {
+    return (0);
+    
+}
 void    Contact::set_nickname(std::string nname)
 {
     nick_name = nname;
