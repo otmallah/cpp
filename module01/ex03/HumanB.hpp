@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 19:44:59 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/25 12:10:06 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:26:31 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class HumanB {
         std::string name;
         Weapon *weap;
     public :
+        HumanB();
         void    attack();
         HumanB(std::string str);
         void    setWeapon(Weapon *weap);

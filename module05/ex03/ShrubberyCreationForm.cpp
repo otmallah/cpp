@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 18:51:21 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 00:48:30 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/02 16:32:18 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,6 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 ShrubberyCreationForm::ShrubberyCreationForm(std::string name):Form(name, 137, 145)
 {
     this->target = name;
-}
-
-ShrubberyCreationForm::ShrubberyCreationForm()
-{
-    std::cout << "ShrubberyCreationForm Default Constructor called" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm & new_obj)

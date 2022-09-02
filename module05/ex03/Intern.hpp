@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 01:10:02 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 01:48:42 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/02 16:04:49 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/02 19:38:14 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,25 @@
 #define INTERN_HPP
 
 #include <iostream>
-#include "Form.hpp"
+#include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "Form.hpp"
 
 class Intern
 {
     public:
         Intern();
-        Intern(const Intern & new_obj);
-        Intern & operator = (const Intern &  new_obj);
-        Form *makeForm(std::string name, std::string target);
         ~Intern();
+        Intern(const Intern & new_obj);
+        Intern & operator = (const Intern & old_obj);
+        Form  *  makeForm(std::string name, std::string target);
+        Form *   makeShruberry(std::string target);
+        Form *   makePresident(std::string target);
+        Form *   makeRobot(std::string target);
 };
+
 
 
 #endif
