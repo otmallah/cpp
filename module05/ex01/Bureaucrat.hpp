@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 17:35:38 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/01 17:24:52 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/01 21:23:39 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include <iostream>
 
-#include "./Form.hpp"
 
+#include "Form.hpp"
 class Form;
 
 class   Bureaucrat {

@@ -6,13 +6,13 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:08:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 01:52:09 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/01 23:05:07 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form():NumberTosignedForm(0),NumberToexecuteForm(0)
+Form::Form():NumberToexecuteForm(0),NumberTosignedForm(0)
 {
     BoolNumber = false;
 }

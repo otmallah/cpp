@@ -4,7 +4,7 @@ CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 COM = c++
 
-FILES = main.cpp Form.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp Bureaucrat.cpp
+FILES = main.cpp Bureaucrat.cpp Form.cpp
 
 all :
 	$(COM) $(CFLAGS) $(FILES) -o $(NAME)
