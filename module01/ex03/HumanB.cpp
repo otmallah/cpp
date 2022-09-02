@@ -6,20 +6,24 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 19:45:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 16:26:49 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/02 22:37:59 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB()
+HumanB::HumanB() : weap()
 {
-    weap = nullptr;
+    // weap = nullptr;
+    std::cout << "Default Distructor called" << std::endl;
 }
 
 void    HumanB::attack()
 {
-    std::cout << this->name << " attacks with their " << weap->getType() << std::endl;
+    if (!weap)
+        std::cout << "la waaalo maansibch " << std::endl;
+    else
+        std::cout << this->name << " attacks with their " << weap->getType() << std::endl;
 }
 
 HumanB::HumanB(std::string str)
@@ -29,6 +33,5 @@ HumanB::HumanB(std::string str)
 
 void    HumanB::setWeapon(Weapon *weap)
 {
-    std::cout << "lskkdjc";
     this->weap = weap;
 }
