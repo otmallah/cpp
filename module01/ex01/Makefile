@@ -7,7 +7,7 @@ COM = c++
 FILES = main.cpp Zombie.cpp zombieHorde.cpp
 
 all :
-	$(COM) $(CFLAGS) $(FILES) -o $(NAME) -fsanitize=address -g3
+	$(COM) $(CFLAGS) $(FILES) -o $(NAME)
 
 clean :
 	rm $(NAME)

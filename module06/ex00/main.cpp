@@ -5,33 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 12:59:13 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/31 19:38:18 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/03 15:21:26 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/03 19:53:08 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
+#include <iostream>
+
+
+class test  {
+    private :
+        int a;
+    public :
+        int get() const 
+        {
+            a = 20;
+        }
+};
 
 int main()
 {
-    PhoneBook phone;
-    std::string str;
-
-    while (1 && !std::cin.eof())
-    {
-        std::cout << "Enter the command : ";
-        getline(std::cin, str);
-        if (str == "ADD")
-        {
-            phone.ADD();
-            if (phone.check == 1)
-                phone.i++;
-            if (phone.count < 8)
-                phone.count = phone.i;
-        }
-        else if (str == "SEARCH")
-            phone.SEARCH();
-        else if (str == "EXIT")
-            return (0);
-    }   
+    test obj;
+    sdkjfksdfjk
+    std::cout << obj.get() << std::endl;    
 }
