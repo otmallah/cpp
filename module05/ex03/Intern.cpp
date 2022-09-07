@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 16:07:12 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 19:54:10 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/05 18:23:41 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,29 +70,28 @@ Form *   Intern::makeRobot(std::string target)
 Form * Intern::makeForm(std::string name, std::string target)
 {
     std::string name1[3] = {"PresidentialPardonForm", "RobotomyRequestForm", "ShrubberyCreationForm"};
-    Form * form;
+    Form * form = NULL;
     int  i  = 0;
 
     while (i < 3)
     {
         if (name1[i].compare(name) == 0)
-        {
-            switch (i)
-            {
-            case 0:
-                form = this->makePresident(target);
-                break;
-            case 1:
-                form = this->makeRobot(target);
-                break;
-            case 2:
-                form = this->makeShruberry(target);
-                break;
-            default:
-                break;
-            }
-        }
+            break;
         i++;
+    }
+    switch (i)
+    {
+    case 0:
+        form = this->makePresident(target);
+        break;
+    case 1:
+        form = this->makeRobot(target);
+        break;
+    case 2:
+        form = this->makeShruberry(target);
+        break;
+    default:
+        break;
     }
     return form;
 }

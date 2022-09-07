@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -6,7 +7,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 23:44:33 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/25 19:18:37 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/05 16:38:53 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +15,8 @@
 #define FIXED_HPP
 
 #include <iostream>
-#include <tgmath.h>
+#include <cmath>
+#include <fstream>
 
 class Fixed {
     
@@ -24,15 +26,15 @@ class Fixed {
     
     public :
         Fixed();
-        Fixed(const Fixed& new_obj);
+        ~Fixed();
+        Fixed(Fixed const& new_obj);
         Fixed(const int number);
         Fixed(const float number);
         Fixed& operator=(const Fixed& fix);
-        //~Fixed();
-        float toFloat( void );
-        int toInt( void );
+        float toFloat( void ) const;
+        int toInt( void ) const;
         int getFixed();
 };
 
-
+std::ostream & operator << (std::ostream &out, Fixed const & fixed);
 #endif

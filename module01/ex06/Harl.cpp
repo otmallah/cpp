@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 13:10:20 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/22 17:13:22 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/04 15:30:32 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,41 +42,35 @@ void    Harl::complain(std::string level)
 {
     std::string  name[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     int i = 0;
-    int k = 0;
 
     while (i < 4)
     {
         if (name[i].compare(level) == 0)
-        {
-            k = 1;
-            switch (i)
-            {
-                case 0:
-                    debug();
-                    info();
-                    warning();
-                    error();
-                    break;
-                case 1:
-                    info();
-                    warning();
-                    error();
-                    break;
-                case 2:
-                    warning();
-                    error();
-                    break;
-                case 3:
-                    error();
-                    break;
-            }
-        }
+            break;
         i++;
     }
-    while (k == 0)
+    switch (i)
     {
-        std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-        break;
+        case 0:
+            debug();
+            info();
+            warning();
+            error();
+            break;
+        case 1:
+            info();
+            warning();
+            error();
+            break;
+        case 2:
+            warning();
+            error();
+            break;
+        case 3:
+            error();
+            break;
+        default:
+                std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
     }
     
 }

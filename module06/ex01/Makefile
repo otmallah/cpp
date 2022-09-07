@@ -1,13 +1,13 @@
-NAME = fixed
+NAME = serialize
 
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 COM = c++
 
-FILES = main.cpp  Fixed.cpp
+FILES = main.cpp 
 
 all :
-	$(COM) $(CFLAGS) $(FILES) -o $(NAME)
+		$(COM) $(CFLAGS) $(FILES) -o $(NAME)
 
 clean :
 	rm $(NAME)

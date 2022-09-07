@@ -6,15 +6,14 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 19:45:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 22:37:59 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/04 15:23:19 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB() : weap()
+HumanB::HumanB()
 {
-    // weap = nullptr;
     std::cout << "Default Distructor called" << std::endl;
 }
 

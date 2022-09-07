@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 23:19:57 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/04 11:45:20 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/07 00:24:22 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/07 00:25:08 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Base.hpp"
 
-int main()
+Base::~Base()
 {
-    Zombie *zom;
-
-    zom = zombieHorde(1, "pook");
-    int i = 0;
-    while (i < 1)
-    {
-        zom[i].announce();
-        i++;
-    }
-    delete [] zom;
+    std::cout << "Destructor called" << std::endl;
 }
+

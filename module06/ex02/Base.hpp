@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 23:19:57 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/04 11:45:20 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/07 00:20:36 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/07 00:25:23 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef BASE_HPP
+#define BASE_HPP
 
-int main()
-{
-    Zombie *zom;
+#include <iostream>
 
-    zom = zombieHorde(1, "pook");
-    int i = 0;
-    while (i < 1)
-    {
-        zom[i].announce();
-        i++;
-    }
-    delete [] zom;
-}
+class Base {
+    public :
+        virtual ~Base();
+};
+
+class A : public Base {
+
+};
+
+class B : public Base {
+
+};
+
+class C : public Base {
+
+};
+
+#endif
