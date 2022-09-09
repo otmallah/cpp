@@ -6,29 +6,11 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 22:13:24 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/06 20:46:39 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/08 19:02:16 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
-
-struct Data
-{
-    int a;
-    int b;
-    char c;
-};
-
-uintptr_t   serialize(Data* ptr)
-{
-    return (reinterpret_cast<uintptr_t>(ptr));
-}
-
-Data*   deserialize(uintptr_t  raw)
-{
-    return (reinterpret_cast<Data *>(raw));
-}
+#include "Data.hpp"
 
 int main()
 {
