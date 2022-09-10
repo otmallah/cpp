@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 16:32:12 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:12:08 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/10 22:01:06 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ ScavTrap::ScavTrap( std::string name ):ClapTrap(name)
     std::cout << "ScavTrap constructore called " << std::endl;
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap() 
 {
-    std::cout << "ScavTrap ";
-    ClapTrap::~ClapTrap();
+    std::cout << "ScavTrap Destructor called";
 }
 
 void    ScavTrap::attack( const std::string& target)

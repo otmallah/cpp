@@ -6,40 +6,33 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:18:42 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/09 21:59:33 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:46:13 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-class pok{
-    private :
-        int *arr;
-    public :
-        pok()
-        {
-            arr = new int[5];
-            for (int i = 0; i < 5; i++)
-            {
-                arr[i] = 0;
-            }
-        }
-        void get()
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                
-            }
-            
-        }
-};
-
-
+#define MAX_VAL 750
 int main(int, char**)
 {
-    Array<int> obj(5);
+    Array<int> numbers(5);
+    numbers[0] = 20;
+    numbers[1] = 30;
+    numbers[2] = 40;
+
+    try
+    {
+        numbers[20] = 20;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+
+    Array<int> obj = numbers;
     Array<int> tmp(obj);
-    obj[0] = 20;
-    tmp[0] = 50;
-    std::cout << tmp.size() << std::endl;  
+    obj.get();
+    std::cout << "----****-----" << std::endl;
+    tmp.get();
 }

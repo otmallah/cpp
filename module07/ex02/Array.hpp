@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 13:04:29 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/09 21:59:47 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:41:42 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define ARRAY_HPP
 
 #include <iostream>
-
+#include <cstring>
 
 template <typename T> 
 class Array 
@@ -32,10 +32,7 @@ class Array
         {
             _size = n;
             array = new T[n];
-            for (unsigned int i = 0; i < n; i++)
-            {
-                array[i] = 0;
-            }
+            memset(array, 0, sizeof(*array)*n);
         }
         Array(const Array& obj)
         {
@@ -48,7 +45,7 @@ class Array
             }
             for (unsigned int i = 0; i < this->_size; i++)
             {
-                this->array[i] = temp[i];
+                this->array[i] = obj.array[i];
             }
             delete [] temp;
         }
@@ -69,10 +66,8 @@ class Array
         }
         int &operator[](unsigned int i)
         {
-            if (i >= this->_size) {
-                throw std::exception() ;
-                return array[0];
-            }
+            if (i > this->_size)
+                throw std::exception();
             return array[i];
         }
         unsigned int size() const {return this->_size;}
@@ -82,11 +77,9 @@ class Array
             {
                 std::cout << this->array[i] << std::endl;
             }
-            
         }
         ~Array()
         {
-            std::cout << this->array[0] << std::endl;
             std::cout << "destructor called" << std::endl;
             delete [] array;
         }

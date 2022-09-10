@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 21:25:04 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:42:28 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/10 22:00:29 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class FragTrap : public ClapTrap {
         FragTrap (std::string name);
         ~FragTrap();
         void    highFivesGuys(void);
-        void attack(const std::string& target);
 };
 
 #endif
