@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 16:07:12 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/05 18:23:41 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:47:21 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,50 +22,7 @@ Intern::~Intern()
     std::cout << "Destructor Called" << std::endl;
 }
 
-Form *   Intern::makeShruberry(std::string target)
-{
-    Form * form;
 
-    Bureaucrat bureau("Othman", 5);
-    ShrubberyCreationForm * shrubbery;
-    shrubbery = new ShrubberyCreationForm(target);
-    shrubbery->beSigned(bureau);
-    shrubbery->execute(bureau);
-    bureau.executeForm(*shrubbery);
-    form = shrubbery;
-    std::cout << "Intern creates" << form->getName() << std::endl;
-    return form;
-}
-
-Form *   Intern::makePresident(std::string target)
-{
-    Form * form;
-
-    Bureaucrat bureau("Othman1", 5);
-    PresidentialPardonForm *president;
-    president = new PresidentialPardonForm(target);
-    president->beSigned(bureau);
-    president->execute(bureau);
-    bureau.executeForm(*president);
-    form = president;
-    std::cout << "Intern creates" << form->getName() << std::endl;
-    return form;
-}
-
-Form *   Intern::makeRobot(std::string target)
-{
-    Form * form;
-    std::cout << "/*/**/*/*/*/*/*/*/*/*/**/*/*/*/*/*/*/*/*/*/*/*/*/\n";
-    Bureaucrat bureau("Othman1", 5);
-    RobotomyRequestForm *Robot;
-    Robot = new RobotomyRequestForm(target);
-    Robot->beSigned(bureau);
-    //Robot->execute(bureau);
-    //bureau.executeForm(*Robot);
-    form = Robot;
-    std::cout << "Intern creates" << form->getName() << std::endl;
-    return form;
-}
 
 Form * Intern::makeForm(std::string name, std::string target)
 {
@@ -82,13 +39,13 @@ Form * Intern::makeForm(std::string name, std::string target)
     switch (i)
     {
     case 0:
-        form = this->makePresident(target);
+        return new PresidentialPardonForm(target);
         break;
     case 1:
-        form = this->makeRobot(target);
+        return new RobotomyRequestForm(target);
         break;
     case 2:
-        form = this->makeShruberry(target);
+        return new ShrubberyCreationForm(target);
         break;
     default:
         break;

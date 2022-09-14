@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 18:51:21 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 16:32:18 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:44:21 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if (this->getBoolNumber() == true && executor.getGrade() <= this->getNumberToexecuteForm())
     {
+    std::cout << "ha an" << std::endl;
         std::ofstream   myFile;
         myFile.open(this->target + "_shrubbery") ; 
         

@@ -5,22 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 15:28:35 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/10 17:23:05 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/13 12:34:50 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/14 18:22:47 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "easyfind.hpp"
+#include <array>
 
-int main( void ) {
-Fixed a;
-Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-std::cout << a << std::endl;
-std::cout << ++a << std::endl;
-std::cout << a << std::endl;
-std::cout << a++ << std::endl;
-std::cout << a << std::endl;
-std::cout << b << std::endl;
-std::cout << Fixed::max( a, b ) << std::endl;
-        return 0;
+int main()
+{
+    std::vector<int> num;
+    num.push_back(150);
+    num.push_back(15);
+    num.push_back(1500);
+    num.push_back(1);
+    num.push_back(50);
+
+    try
+    {
+        easyfind(num, 1500);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << " : " << "oops" << std::endl;
+    }
 }

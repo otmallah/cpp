@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 20:12:45 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:41:55 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/13 19:25:36 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/14 11:20:23 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef _EASYFIND_HPP_
+#define _EASYFIND_HPP_
+
 #include <iostream>
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#include <vector>
 
-int main()
+template<typename T> void easyfind(T a, int num)
 {
-    FragTrap obj("POOOK");
-
-    obj.attack("minouche");
-    obj.takeDamage(10);
-    obj.attack("minouche");
+    typename T::iterator found;
+    found = find(a.begin(), a.end(), num);
+    if (found == a.end())
+        throw std::exception();
+    std::cout << "yes we find : " << *found << std::endl;
 }
+
+#endif

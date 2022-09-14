@@ -6,11 +6,16 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:46:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 00:59:52 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:41:00 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat()
+{
+
+}
 
 void    Bureaucrat::signForm(Form const & form)
 {

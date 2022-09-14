@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 16:04:49 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/05 18:22:43 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:33:04 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ class Intern
         Intern(const Intern & new_obj);
         Intern & operator = (const Intern & old_obj);
         Form  *  makeForm(std::string name, std::string target);
-        Form *   makeShruberry(std::string target);
-        Form *   makePresident(std::string target);
-        Form *   makeRobot(std::string target);
+        // Form *   makeShruberry(std::string target);
+        // Form *   makePresident(std::string target);
+        // Form *   makeRobot(std::string target);
 };
 
 

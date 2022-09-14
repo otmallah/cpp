@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/26 16:32:08 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/26 21:11:43 by otmallah         ###   ########.fr       */
+/*   Created: 2022/09/14 18:30:12 by otmallah          #+#    #+#             */
+/*   Updated: 2022/09/14 22:00:25 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef _SPAN_HPP_
+#define _SPAN_HPP_
 
 #include <iostream>
-#include "ClapTrap.hpp"
+#include <vector>
 
-class ScavTrap : public ClapTrap {
+class Span {
+    
+    private:
+        static unsigned int          _number;
+        std::vector<int>    vec_int;
+        unsigned int        _size;
     public :
-        ScavTrap( std::string name );
-        ~ScavTrap();
-        void    attack( const std::string& target);
-        void    guardGate();
+        Span();
+        Span(unsigned int N);
+        ~Span();
+        // Span& operator=(const Span&);
+        void    addNumber(int);
+        int     shortestSpan();
+        int     longestSpan();    
 };
-      
+
 
 #endif
