@@ -6,13 +6,13 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:30:12 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/14 22:00:25 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/16 18:44:42 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _SPAN_HPP_
 #define _SPAN_HPP_
-
+#include <algorithm>
 #include <iostream>
 #include <vector>
 
@@ -25,9 +25,10 @@ class Span {
     public :
         Span();
         Span(unsigned int N);
+        Span& operator=(const Span&);
         ~Span();
-        // Span& operator=(const Span&);
         void    addNumber(int);
+        void    addNumber();
         int     shortestSpan();
         int     longestSpan();    
 };

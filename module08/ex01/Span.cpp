@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:35:21 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/14 22:20:39 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/16 18:47:25 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ unsigned int Span::_number;
 
 Span::Span()
 {
-    
+    _size = 0;
 }
 
 Span::Span(unsigned int N)
@@ -44,10 +44,39 @@ void    Span::addNumber(int number)
     this->_number++;
 }
 
+Span&   Span::operator=(const Span& obj)
+{
+    this->_number = obj._number;
+    this->vec_int = obj.vec_int;
+    this->_size = obj._size;
+    std::begin();
+    std::end();
+    std::range_error();
+    
+    return *this;
+}
+
+void    Span::addNumber()
+{
+    srand(time(0));
+    if (_size <= 0)
+    {
+        std::cout << "Empty container hh" << std::endl;
+        std::exit(1);
+    }
+    for (unsigned int i = 0; i < _size; i++)
+    {
+        vec_int.push_back(rand());
+        
+    }
+}
+
 int     Span::shortestSpan()
 {
     int find1;
     int find2;
+    std::vector<int> vec;
+    vec = vec_int;
     std::vector<int>::iterator it;
     size_t a = 0;
     try
@@ -60,13 +89,13 @@ int     Span::shortestSpan()
         std::cerr << e.what() << " : waalo " << '\n';
         std::exit(0);
     }   
-    std::sort(vec_int.begin(), vec_int.end());
-    it = vec_int.begin();
-    while (it != vec_int.end() - 1)
+    std::sort(vec.begin(), vec.end());
+    it = vec.begin();
+    while (it != vec.end() - 1)
     {
         if (a != _size)
         {
-            find1 = vec_int.at(a + 1) - vec_int.at(a);
+            find1 = vec.at(a + 1) - vec.at(a);
             if (a == 0)
                 find2 = find1;
             if (find1 < find2)
