@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 17:35:38 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/01 15:00:12 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 20:55:13 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 
 #include <iostream>
 
-class   Buraucrat {
+class   Bureaucrat {
     
     private :
         const std::string name;
         int grade;
     
     public :
-        Buraucrat(const std::string name1, int numberGrade);
-        ~Buraucrat();
-        Buraucrat(const Buraucrat& new_obj);
-        Buraucrat& operator = (const Buraucrat& old_obj);
+        Bureaucrat();
+        Bureaucrat(const std::string name1, int numberGrade);
+        ~Bureaucrat();
+        Bureaucrat(const Bureaucrat& new_obj);
+        Bureaucrat& operator = (const Bureaucrat& old_obj);
         std::string    getName() const;
         int     getGrade() const;
         void    increment();
@@ -40,6 +41,6 @@ class   Buraucrat {
         };
 
 };
-std::ostream & operator << (std::ostream &out , Buraucrat const & old_obj);
+std::ostream & operator << (std::ostream &out , Bureaucrat const & old_obj);
 
 #endif

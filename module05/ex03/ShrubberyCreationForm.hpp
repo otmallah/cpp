@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 18:48:11 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/01 23:06:34 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 22:00:00 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class   ShrubberyCreationForm : public Form
         ShrubberyCreationForm(std::string name);
         ~ShrubberyCreationForm();
         ShrubberyCreationForm(const ShrubberyCreationForm & new_obj);
+        ShrubberyCreationForm& operator=(const ShrubberyCreationForm&);
         void    execute(Bureaucrat const & executor) const;
         std::string     getTarget();
 };

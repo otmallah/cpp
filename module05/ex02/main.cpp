@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:55 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 15:50:13 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:54:48 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,21 @@
 
 int main ()
 {
-    Bureaucrat obj("Othman", 60);
-    Bureaucrat obj1("raja", 4);
+    // Bureaucrat obj("Othman", 60);
+    // Bureaucrat obj1("raja", 4);
     Bureaucrat obj2("mallah", 8);
-    ShrubberyCreationForm a("mimoune");
-    PresidentialPardonForm b("minoche");
+    // ShrubberyCreationForm a("mimoune");
+    // PresidentialPardonForm b("minoche");
     RobotomyRequestForm c("wa hassane");
     try
     {
-        a.beSigned(obj);
-        b.beSigned(obj1);
-        b.execute(obj1);
+        // a.beSigned(obj);
+        // b.beSigned(obj1);
+        // b.execute(obj1);
         c.beSigned(obj2);
         c.execute(obj2);
-        a.execute(obj);
+        // a.execute(obj);
+        obj2.executeForm(c);
     }
     catch(ShrubberyCreationForm::GradeTooHighException & e)
     {
@@ -45,8 +46,8 @@ int main ()
     //obj.executeForm(a);
     //obj1.signForm(b);
     //obj1.executeForm(b);
-    std::cout << "--------------" << std::endl;
-    obj2.executeForm(b);
+    // std::cout << "--------------" << std::endl;
+    // obj2.executeForm(b);
     //obj2.signForm(b);
-    std::cout << "--------------";
+    // std::cout << "--------------";
 }

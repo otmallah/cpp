@@ -6,11 +6,27 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 20:41:46 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 00:51:48 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:55:23 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm()
+{
+    std::cout << "Default constructor" << std::endl;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj)
+{
+    *this = obj;
+}
+
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& obj)
+{
+    this->target = obj.target;
+    return *this;
+}
 
 RobotomyRequestForm::RobotomyRequestForm(std::string name):Form(name, 45, 72)
 {
@@ -30,8 +46,14 @@ std::string     RobotomyRequestForm::getTarget()
 
 void        RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+    srand(time(NULL));
     if (this->getBoolNumber() == true && executor.getGrade() <= this->getNumberToexecuteForm())
-        std::cout << this->target << " has been robotomized successfully 50'%' of the time " << std::endl;
+    {
+        if (rand() % 2 == 1)
+            std::cout << this->target << " has been robotomized successfully" << std::endl;
+        else
+            std::cout << "RobotomyRequestForm failed" << std::endl;
+    }
     else
         throw GradeTooHighException();
 }

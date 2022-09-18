@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:08:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 15:34:23 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 22:04:53 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Form::Form(const std::string name1, const int numS, const int numE):name(name1),
         throw GradeTooHighException();
     if (NumberToexecuteForm > 150 )
         throw GradeTooLowException();
-    std::cout << "Form Constructor called\n" << std::endl;
+    std::cout << "Form Constructor called" << std::endl;
 }
 
 Form::Form(const Form& new_obj):name(new_obj.name),NumberTosignedForm(new_obj.NumberTosignedForm),NumberToexecuteForm(new_obj.NumberToexecuteForm)

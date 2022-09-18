@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 16:07:12 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/13 15:47:21 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 22:01:13 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ Intern::~Intern()
 }
 
 
-
 Form * Intern::makeForm(std::string name, std::string target)
 {
-    std::string name1[3] = {"PresidentialPardonForm", "RobotomyRequestForm", "ShrubberyCreationForm"};
+    std::string name1[3] = {"presidential pardonForm", "robotomy request", "shrubbery creationForm"};
     Form * form = NULL;
     int  i  = 0;
 

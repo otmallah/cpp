@@ -6,11 +6,22 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:08:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/01 17:38:00 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:27:26 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+Form::Form():NumberTosignedForm(0),NumberToexecuteForm(0)
+{
+    std::cout << "Default constructor" << std::endl;
+}
+
+Form& Form::operator=(const Form& obj)
+{
+    this->BoolNumber = obj.BoolNumber;
+    return *this;
+}
 
 Form::Form(const std::string name1, const int numS, const int numE):name(name1),NumberTosignedForm(numS),NumberToexecuteForm(numE)
 {
@@ -23,7 +34,7 @@ Form::Form(const std::string name1, const int numS, const int numE):name(name1),
         throw GradeTooHighException();
     if (NumberToexecuteForm > 150 )
         throw GradeTooLowException();
-    std::cout << "Form Constructor called\n" << std::endl;
+    std::cout << "Form Constructor called" << std::endl;
 }
 
 Form::Form(const Form& new_obj):name(new_obj.name),NumberTosignedForm(new_obj.NumberTosignedForm),NumberToexecuteForm(new_obj.NumberToexecuteForm)
@@ -76,6 +87,10 @@ void    Form::beSigned(Bureaucrat bureaucrat)
 
 std::ostream & operator << (std::ostream &out ,Form const & old_obj)
 {
-    out << "Name " << old_obj.getName() <<" Numbertosigned " << old_obj.getNumbertTosignedForm() << " signe " << old_obj.getBoolNumber() << std::endl;
+    out << "Name : " << old_obj.getName() <<" Numbertosigned " << old_obj.getNumbertTosignedForm() << " signe " << old_obj.getBoolNumber() ;
+    if (old_obj.getBoolNumber() == 1)
+        std::cout << " True " << std::endl;
+    else
+        std::cout << " false " << std::endl;
     return out;
 }

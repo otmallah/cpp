@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:46:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/13 15:41:00 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 22:05:12 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Bureaucrat::Bureaucrat()
 {
-
+    std::cout << "Default constructor" << std::endl;
 }
 
 void    Bureaucrat::signForm(Form const & form)
@@ -35,7 +35,7 @@ Bureaucrat::Bureaucrat(std::string name1, int numberGrade):name(name1)
     {
         this->grade = numberGrade;
     }
-    std::cout << "Buraucrat Constructor called\n" << std::endl;
+    std::cout << "Buraucrat Constructor called" << std::endl;
 }
 
 void    Bureaucrat::executeForm(Form const & form)

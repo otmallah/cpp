@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:08:05 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 01:52:09 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:56:52 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 Form::Form():NumberTosignedForm(0),NumberToexecuteForm(0)
 {
     BoolNumber = false;
+}
+
+Form& Form::operator=(const Form& obj)
+{
+    this->BoolNumber = obj.BoolNumber;
+    return *this;
 }
 
 Form::Form(const std::string name1, const int numS, const int numE):name(name1),NumberTosignedForm(numS),NumberToexecuteForm(numE)
@@ -28,7 +34,7 @@ Form::Form(const std::string name1, const int numS, const int numE):name(name1),
         throw GradeTooHighException();
     if (NumberToexecuteForm > 150 )
         throw GradeTooLowException();
-    std::cout << "Form Constructor called\n" << std::endl;
+    std::cout << "Form Constructor called" << std::endl;
 }
 
 Form::Form(const Form& new_obj):name(new_obj.name),NumberTosignedForm(new_obj.NumberTosignedForm),NumberToexecuteForm(new_obj.NumberToexecuteForm)

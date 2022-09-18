@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 20:41:45 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 00:49:20 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:45:24 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class RobotomyRequestForm : public Form
     private:
         std::string target;
     public:
+        RobotomyRequestForm();
+        RobotomyRequestForm& operator=(const RobotomyRequestForm&);
         RobotomyRequestForm(std::string name);
         ~RobotomyRequestForm();
         RobotomyRequestForm(const RobotomyRequestForm & new_obj);

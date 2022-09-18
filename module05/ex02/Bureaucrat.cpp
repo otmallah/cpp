@@ -6,11 +6,16 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:46:19 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 00:59:52 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:53:21 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat()
+{
+    std::cout << "Default constructor" << std::endl;
+}
 
 void    Bureaucrat::signForm(Form const & form)
 {
@@ -30,7 +35,7 @@ Bureaucrat::Bureaucrat(std::string name1, int numberGrade):name(name1)
     {
         this->grade = numberGrade;
     }
-    std::cout << "Buraucrat Constructor called\n" << std::endl;
+    std::cout << "Buraucrat Constructor called" << std::endl;
 }
 
 void    Bureaucrat::executeForm(Form const & form)

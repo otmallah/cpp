@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 16:00:55 by otmallah          #+#    #+#             */
-/*   Updated: 2022/08/31 13:34:38 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:15:01 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int main ()
     //Buraucrat obj("othman", 20);
     try
     {
-        Buraucrat obj("Othman", 150);
+        Bureaucrat obj("Othman", 1500);
         obj.decrement();
         obj.increment();
-        std::cout << obj.getGrade();
+        std::cout << obj;
     }
-    catch(Buraucrat::GradeTooHighException& e)
+    catch(Bureaucrat::GradeTooHighException& e)
     {
         std::cerr << e.what() << '\n';
     }
-    catch(Buraucrat::GradeTooLowException& e)
+    catch(Bureaucrat::GradeTooLowException& e)
     {
         std::cerr << e.what() << '\n';
     }

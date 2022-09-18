@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 20:08:07 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/01 23:03:32 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:56:41 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Form {
 		Form();
 		Form(std::string name, const int numE, const int numS);
 		~Form();
+		Form& operator=(const Form &);
 		Form(const Form& new_obj);
 		const std::string		getName() const;
 		bool					getBoolNumber() const;

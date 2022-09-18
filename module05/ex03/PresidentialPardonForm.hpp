@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 20:50:11 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 00:44:28 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:57:56 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ class PresidentialPardonForm : public Form
     private:
         std::string target;
     public:
+        PresidentialPardonForm();
         PresidentialPardonForm(std::string name);
+        PresidentialPardonForm& operator = (const PresidentialPardonForm&);
         ~PresidentialPardonForm();
-        PresidentialPardonForm(const PresidentialPardonForm & new_obj);
+        PresidentialPardonForm(const PresidentialPardonForm &);
         void            execute(Bureaucrat const & executor) const;
         std::string     getTarget();
 };

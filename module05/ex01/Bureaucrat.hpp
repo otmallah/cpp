@@ -6,7 +6,7 @@
 /*   By: otmallah <otmallah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 17:35:38 by otmallah          #+#    #+#             */
-/*   Updated: 2022/09/02 15:58:12 by otmallah         ###   ########.fr       */
+/*   Updated: 2022/09/18 21:15:41 by otmallah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class   Bureaucrat {
         int grade;
     
     public :
+        Bureaucrat();
         Bureaucrat(const std::string name1, int numberGrade);
         ~Bureaucrat();
         Bureaucrat(const Bureaucrat& new_obj);
