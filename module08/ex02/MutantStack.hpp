@@ -19,11 +19,11 @@
 template <typename T> class MutantStack : public std::stack<T>
 {
     public :
-        std::stack<int>::container_type::iterator    begin()
+        typename std::stack<T>::container_type::iterator    begin()
         {
             return this->c.begin();
         }
-        std::stack<int>::container_type::iterator    end()
+        typename std::stack<T>::container_type::iterator    end()
         {
             return this->c.end();
         }
